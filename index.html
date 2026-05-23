@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sh Web Developer Agency</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+  scroll-behavior:smooth;
+}
+
+body{
+  background:#070b18;
+  color:white;
+}
+
+/* NAV */
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  padding:15px 25px;
+  background:rgba(10,15,30,0.8);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid #1f2937;
+  z-index:1000;
+}
+
+nav h2{
+  color:#38bdf8;
+}
+
+nav a{
+  color:white;
+  margin-left:15px;
+  text-decoration:none;
+  font-size:14px;
+}
+
+/* HERO */
+.hero{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:20px;
+  background:linear-gradient(135deg,#0f172a,#070b18);
+}
+
+.hero h1{
+  font-size:50px;
+  background:linear-gradient(90deg,#38bdf8,#a78bfa);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.hero p{
+  color:#94a3b8;
+  margin-top:10px;
+  font-size:18px;
+}
+
+.btn{
+  margin-top:20px;
+  padding:12px 22px;
+  background:linear-gradient(90deg,#22c55e,#38bdf8);
+  border:none;
+  border-radius:10px;
+  color:black;
+  font-weight:bold;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.btn:hover{
+  transform:scale(1.1);
+}
+
+/* SECTIONS */
+section{
+  padding:80px 20px;
+  text-align:center;
+}
+
+/* ANIMATION */
+.hidden{
+  opacity:0;
+  transform:translateY(40px);
+  transition:all 0.8s ease;
+}
+
+.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* CARDS */
+.cards{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:20px;
+}
+
+.card{
+  width:260px;
+  padding:20px;
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.1);
+  border-radius:15px;
+  backdrop-filter:blur(10px);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+  border-color:#38bdf8;
+}
+
+.price{
+  color:#facc15;
+  font-size:22px;
+  margin:10px 0;
+}
+
+/* SERVICES */
+.service{
+  padding:15px;
+  border-radius:10px;
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.1);
+  margin:10px;
+  display:inline-block;
+  transition:0.3s;
+}
+
+.service:hover{
+  transform:scale(1.1);
+  border-color:#a78bfa;
+}
+
+/* PORTFOLIO */
+.project{
+  width:200px;
+  height:120px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:rgba(255,255,255,0.05);
+  border-radius:10px;
+  margin:10px;
+}
+
+/* CONTACT */
+input,textarea{
+  width:80%;
+  padding:10px;
+  margin:8px;
+  border:none;
+  border-radius:8px;
+}
+
+button{
+  padding:12px 20px;
+  background:#38bdf8;
+  border:none;
+  border-radius:10px;
+  cursor:pointer;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:20px;
+  background:#0f172a;
+  color:#94a3b8;
+}
+
+/* WHATSAPP */
+.whatsapp{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  padding:15px;
+  border-radius:50%;
+  font-size:22px;
+  text-decoration:none;
+  color:white;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <h2>Sh Web Dev</h2>
+  <div>
+    <a href="#pricing">Pricing</a>
+    <a href="#services">Services</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>Build Your Online Business</h1>
+  <p>Modern Websites for Shops & Brands</p>
+  <a class="btn" href="#contact">Get Started</a>
+</div>
+
+<!-- PRICING -->
+<section id="pricing" class="hidden">
+  <h2>Pricing</h2>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Basic</h3>
+      <div class="price">₹15,000</div>
+    </div>
+
+    <div class="card">
+      <h3>Standard ⭐</h3>
+      <div class="price">₹25,000</div>
+    </div>
+
+    <div class="card">
+      <h3>Premium</h3>
+      <div class="price">₹50,000</div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="hidden">
+  <h2>Services</h2>
+
+  <div>
+    <div class="service">Business Websites</div>
+    <div class="service">Landing Pages</div>
+    <div class="service">E-commerce</div>
+    <div class="service">Portfolio Sites</div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio" class="hidden">
+  <h2>Portfolio</h2>
+
+  <div class="project">Project 1</div>
+  <div class="project">Project 2</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="hidden">
+  <h2>Contact Us</h2>
+
+  <form onsubmit="send(); return false;">
+    <input placeholder="Name" required><br>
+    <input placeholder="Business Type" required><br>
+    <textarea placeholder="Requirement"></textarea><br>
+    <button>Send</button>
+  </form>
+
+  <p style="margin-top:15px;">
+    📞 9650787601
+  </p>
+</section>
+
+<footer>
+  © 2026 Sh Web Developer Agency
+</footer>
+
+<a class="whatsapp" href="https://wa.me/919650787601">💬</a>
+
+<script>
+function send(){
+  alert("We will contact you soon on WhatsApp!");
+}
+
+/* scroll animation */
+const elements = document.querySelectorAll('.hidden');
+
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
+});
+
+elements.forEach(el=>observer.observe(el));
+</script>
+
+</body>
+</html>
